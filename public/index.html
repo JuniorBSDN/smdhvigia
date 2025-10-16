@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergência e Apoio - Secretaria da Mulher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        /* Estilo para o Alerta de Emergência (Hero) - Fundo de alerta com nosso gradiente */
+        .emergency-hero {
+            background: linear-gradient(135deg, #f5576c 0%, #a71c35 100%); /* Vermelho/Pink Forte */
+        }
+        /* Botão de Saída Rápida Discreto */
+        .emergency-exit-btn {
+            background-color: #374151; /* Cinza escuro para ser discreto */
+            color: #d1d5db; /* Texto claro */
+            transition: background-color 0.3s;
+        }
+        .emergency-exit-btn:hover {
+            background-color: #1f2937; /* Fundo ainda mais escuro no hover */
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .emergency-btn {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+
+    <a href="https://deamvirtual.pc.pa.gov.br/violencia_contra_mulher/" class="fixed bottom-6 right-6 bg-red-600 text-white px-6 py-3 rounded-full shadow-xl flex items-center z-50 hover:bg-red-700 transition">
+        <i data-feather="alert-triangle" class="mr-2 w-5 h-5"></i> DENUNCIE AGORA
+    </a>
+
+    <div class="container mx-auto px-4 py-4 max-w-7xl bg-white shadow-xl min-h-screen">
+        <header class="flex justify-between items-center py-4 border-b border-pink-200">
+            <a href="index.html" class="flex items-center">
+                <img src="https://i.imgur.com/QtGQAZ4.jpeg" width="400px">
+            </a>
+            <div class="hidden md:flex space-x-4 items-center">
+                <a href="index.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Início</a>
+                <a href="ajuda.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Onde Buscar Ajuda</a>
+                <a href="violencia.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Informação</a>
+                <a href="apoio.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Apoio</a>
+            </div>
+        </header>
+
+<!--SLIDE 1-->
+    <div class="slideshow-container relative w-full h-96 overflow-hidden">
+        <div class="mySlides fade relative w-full h-full">
+            <img src="https://img.freepik.com/fotos-premium/uma-jovem-mulher-jogando-jogos-no-parque-na-grama-verde-estendendo-seus-bracos-e-pernas-em-diferentes-direcoes-caindo-e-sorrindo-na-luz-do-sol-de-verao-foto-de-alta-qualidade_163305-227827.jpg" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+                <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
+                    <span class="block mb-2">Você é forte. </span>
+                    <span class="block text-base md:text-xl font-normal">Você merece paz, respeito e uma vida sem medo.</span>
+                    <br>
+                    <a href="ajuda.html" class="inline-block bg-white text-red-600 px-8 py-4 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition transform hover:scale-105">
+                <i data-feather="map-pin" class="mr-2 w-6 h-6 inline-block"></i> ONDE BUSCAR AJUDA PERTO DE VOCÊ
+            </a>
+                </div>
+            </div>
+        </div>
+
+  <!--SLIDE 2-->
+        <div class="mySlides fade relative w-full h-full">
+            <img src="https://img.freepik.com/fotos-gratis/vista-frontal-da-mulher-apreciando-a-grama-na-natureza_23-2148614765.jpg" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+                <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
+                    <span class="block mb-2">A culpa NUNCA é sua</span>
+                    <span class="block text-base md:text-xl font-normal">O agressor é o único responsável pela violência</span>
+               <br>
+                    <a href="ajuda.html" class="inline-block bg-white text-red-600 px-8 py-4 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition transform hover:scale-105">
+                <i data-feather="map-pin" class="mr-2 w-6 h-6 inline-block"></i> ONDE BUSCAR AJUDA PERTO DE VOCÊ
+            </a>
+                </div>
+            </div>
+        </div>
+
+        <!--SLIDE 3-->
+        <div class="mySlides fade relative w-full h-full">
+            <img src="https://img.freepik.com/fotos-premium/retrato-de-uma-jovem-de-pe-em-um-campo-gramado_1048944-15984502.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+                <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
+                    <span class="block mb-2">Não importa o quão difícil pareça</span>
+                    <span class="block text-base md:text-xl font-normal">existe ajuda. Você não está sozinha.</span>
+                <br>
+                    <a href="ajuda.html" class="inline-block bg-white text-red-600 px-8 py-4 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition transform hover:scale-105">
+                <i data-feather="map-pin" class="mr-2 w-6 h-6 inline-block"></i> ONDE BUSCAR AJUDA PERTO DE VOCÊ
+            </a>
+                </div>
+            </div>
+        </div>
+
+        <!--SLIDE 4-->
+        <div class="mySlides fade relative w-full h-full">
+            <img src="https://img.freepik.com/fotos-gratis/mulher-sentada-e-meditando-na-grama_23-2147648570.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+                <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
+                    <span class="block mb-2">Sua voz importa.</span>
+                    <span class="block text-base md:text-xl font-normal"> Seus sentimentos são válidos. Seu futuro é importante.</span>
+                <br>
+                    <a href="ajuda.html" class="inline-block bg-white text-red-600 px-8 py-4 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition transform hover:scale-105">
+                <i data-feather="map-pin" class="mr-2 w-6 h-6 inline-block"></i> ONDE BUSCAR AJUDA PERTO DE VOCÊ
+            </a>
+                </div>
+            </div>
+        </div>
+
+         <!--SLIDE 5-->
+        <div class="mySlides fade relative w-full h-full">
+            <img src="https://img.freepik.com/fotos-premium/mulher-jovem-atenciosa-ao-lado-do-trigo-na-fazenda-durante-um-dia-ensolarado_1048944-4416444.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+                <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
+                    <span class="block mb-2">A violência não te define.</span>
+                    <span class="block text-base md:text-xl font-normal"> Você é muito mais do que a dor que te causaram.</span>
+                <br>
+                    <a href="ajuda.html" class="inline-block bg-white text-red-600 px-8 py-4 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition transform hover:scale-105">
+                <i data-feather="map-pin" class="mr-2 w-6 h-6 inline-block"></i> ONDE BUSCAR AJUDA PERTO DE VOCÊ
+            </a>
+                </div>
+            </div>
+        </div>
+
+           <!--SLIDE 6-->
+        <div class="mySlides fade relative w-full h-full">
+            <img src="https://img.freepik.com/fotos-gratis/foto-de-retrato-de-uma-mulher-loira-feliz-branca-com-um-vestido-de-verao-deitada-em-um-campo-durante-o-por-do-sol_181624-40824.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+                <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
+                    <span class="block mb-2">Você tem o direito</span>
+                    <span class="block text-base md:text-xl font-normal"> de ser feliz, de ser segura e de recomeçar.</span>
+                <br>
+                    <a href="ajuda.html" class="inline-block bg-white text-red-600 px-8 py-4 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition transform hover:scale-105">
+                <i data-feather="map-pin" class="mr-2 w-6 h-6 inline-block"></i> ONDE BUSCAR AJUDA PERTO DE VOCÊ
+            </a>
+                </div>
+            </div>
+        </div>
+           <!--SLIDE 7-->
+        <div class="mySlides fade relative w-full h-full">
+            <img src="https://img.freepik.com/fotos-premium/retrato-de-uma-jovem-deitada-no-campo_1048944-9260176.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+                <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
+                    <span class="block mb-2">Busque apoio.</span>
+                    <span class="block text-base md:text-xl font-normal"> Falar sobre o que aconteceu é um ato de coragem e autocuidado.</span>
+                <br>
+                    <a href="ajuda.html" class="inline-block bg-white text-red-600 px-8 py-4 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition transform hover:scale-105">
+                <i data-feather="map-pin" class="mr-2 w-6 h-6 inline-block"></i> ONDE BUSCAR AJUDA PERTO DE VOCÊ
+            </a>
+                </div>
+            </div>
+        </div>
+           <!--SLIDE 8-->
+        <div class="mySlides fade relative w-full h-full">
+            <img src="https://img.freepik.com/fotos-gratis/vista-superior-de-um-mulher-jovem-chao_23-2148205913.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+                <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
+                    <span class="block mb-2">Há vida após o trauma.</span>
+                    <span class="block text-base md:text-xl font-normal"> Acredite na sua capacidade de cura e na sua liberdade.</span>
+                <br>
+                    <a href="ajuda.html" class="inline-block bg-white text-red-600 px-8 py-4 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition transform hover:scale-105">
+                <i data-feather="map-pin" class="mr-2 w-6 h-6 inline-block"></i> ONDE BUSCAR AJUDA PERTO DE VOCÊ
+            </a>
+                </div>
+            </div>
+        </div>
+        <a class="prev cursor-pointer absolute top-1/2 left-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 px-4 py-2 rounded-full text-2xl select-none hover:bg-opacity-75 transition-all duration-300">❮</a>
+        <a class="next cursor-pointer absolute top-1/2 right-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 px-4 py-2 rounded-full text-2xl select-none hover:bg-opacity-75 transition-all duration-300">❯</a>
+        <div class="dots-container absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+            <span class="dot cursor-pointer h-3 w-3 bg-red-700 rounded-full transition-all duration-300 hover:bg-white"></span>
+            <span class="dot cursor-pointer h-3 w-3 bg-red-700 rounded-full transition-all duration-300 hover:bg-white"></span>
+            <span class="dot cursor-pointer h-3 w-3 bg-red-700 rounded-full transition-all duration-300 hover:bg-white"></span>
+            <span class="dot cursor-pointer h-3 w-3 bg-red-700 rounded-full transition-all duration-300 hover:bg-white"></span>
+            <span class="dot cursor-pointer h-3 w-3 bg-red-700 rounded-full transition-all duration-300 hover:bg-white"></span>
+            <span class="dot cursor-pointer h-3 w-3 bg-red-700 rounded-full transition-all duration-300 hover:bg-white"></span>
+            <span class="dot cursor-pointer h-3 w-3 bg-red-700 rounded-full transition-all duration-300 hover:bg-white"></span>
+            <span class="dot cursor-pointer h-3 w-3 bg-red-700 rounded-full transition-all duration-300 hover:bg-white"></span>
+        </div>
+
+    </div>
+
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.mySlides');
+        const dots = document.querySelectorAll('.dot');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        let timeout;
+
+        function showSlides() {
+            slides.forEach(slide => slide.style.display = 'none');
+            dots.forEach(dot => dot.classList.remove('bg-white'));
+
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = 'block';
+            dots[slideIndex - 1].classList.add('bg-white');
+
+            timeout = setTimeout(showSlides, 10000);
+        }
+
+        function currentSlide(n) {
+            clearTimeout(timeout);
+            slideIndex = n;
+            showSlides();
+        }
+
+        prev.addEventListener('click', () => {
+            clearTimeout(timeout);
+            slideIndex -= 2;
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            showSlides();
+        });
+
+        next.addEventListener('click', () => {
+            clearTimeout(timeout);
+            showSlides();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide(index);
+            });
+        });
+
+        showSlides();
+    </script>
+
+    <section class="main-navigation grid md:grid-cols-3 gap-4 my-10" id="botoes-acao" data-aos="fade-up" data-aos-delay="100">
+        <a href="violencia.html" class="nav-block bg-pink-100 text-pink-700 hover:bg-pink-200 p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold text-lg transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+            <i data-feather="book-open" class="mb-2 w-8 h-8"></i>
+            O Que é Violência? (Informação)
+        </a>
+
+        <a href="ajuda.html" class="nav-block bg-pink-100 text-pink-700 hover:bg-pink-200 p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold text-lg transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+            <i data-feather="users" class="mb-2 w-8 h-8"></i>
+            Rede de Atendimento (Onde Buscar Ajuda)
+        </a>
+
+        <a href="apoio.html" class="nav-block bg-pink-100 text-pink-700 hover:bg-pink-200 p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold text-lg transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+            <i data-feather="scale" class="mb-2 w-8 h-8"></i>
+            Lei Maria da Penha (Direitos)
+        </a>
+    </section>
+
+<script>
+    // Inicializa os ícones Feather novamente para garantir que os novos ícones sejam exibidos
+    feather.replace();
+</script>
+
+        <hr class="border-t-2 border-gray-200 my-10" data-aos="fade-in">
+
+        <section id="noticias" class="py-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-l-4 border-pink-600 pl-3" data-aos="fade-right">Notícias e Destaques</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <div class="bg-gray-100 rounded-lg p-6 shadow-sm hover:shadow-lg transition" data-aos="fade-right">
+    <span class="text-xs font-semibold text-pink-600 uppercase tracking-wider">Alerta Legal | Legislação Atualizada</span>
+    <h3 class="text-xl font-bold text-gray-800 my-2">Lei 14.994/24: Feminicídio é Crime Autônomo e Penas Aumentam</h3>
+    <p class="text-gray-600 mb-4">
+        Entrou em vigor a nova lei que aumenta o rigor contra agressores. O **feminicídio** agora é crime próprio e a pena pode chegar a **40 anos de reclusão**.
+    </p>
+    <a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14994.htm" target="_blank" class="text-pink-600 font-medium hover:underline flex items-center">
+        Acesse o texto integral da Lei 14.994/24 <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+    </a>
+</div>
+
+             <div class="bg-gray-100 rounded-lg p-6 shadow-sm hover:shadow-lg transition" data-aos="fade-left">
+    <span class="text-xs font-semibold text-pink-600 uppercase tracking-wider">Novo Mecanismo de Segurança</span>
+    <h3 class="text-xl font-bold text-gray-800 my-2">Lei 15.125/25: Tornozeleira e Alerta para Agressores sob MPU</h3>
+    <p class="text-gray-600 mb-4">
+        A Medida Protetiva de Urgência (MPU) agora pode ser combinada com o uso de **monitoramento eletrônico** pelo agressor e dispositivo de segurança para a vítima (botão do pânico).
+    </p>
+    <a href="https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2025/Lei/L15125.htm" target="_blank" class="text-pink-600 font-medium hover:underline flex items-center">
+        Acesse o texto integral da Lei 15.125/25 <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+    </a>
+</div>
+
+                <div class="bg-gray-100 rounded-lg p-6 shadow-sm hover:shadow-lg transition flex flex-col" data-aos="fade-left">
+    <span class="text-xs font-semibold text-pink-600 uppercase tracking-wider">Prevenção e Conscientização</span>
+    <h3 class="text-xl font-bold text-gray-800 my-2">Violência Digital: Nova Ameaça e Como Se Proteger</h3>
+    <p class="text-gray-600 mb-4 flex-grow">
+        Conheça os mecanismos legais contra a violência digital, como a **Lei de Perseguição (Stalking)** e a punição pelo uso indevido de imagens íntimas (incluindo *deepfake*).
+    </p>
+    <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14132.htm" target="_blank" class="text-pink-600 font-medium hover:underline flex items-center mt-auto">
+        Acesse a Lei de Stalking (14.132/21) <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+    </a>
+</div>
+
+                <div class="bg-gray-100 rounded-lg p-6 shadow-sm hover:shadow-lg transition" data-aos="fade-left">
+        <span class="text-xs font-semibold text-purple-600 uppercase tracking-wider">Direito & Inclusão | Decisão STF</span>
+        <h3 class="text-xl font-bold text-gray-800 my-2">LGBTQIA+fobia é Crime de Racismo (Inafiançável)</h3>
+        <p class="text-gray-600 mb-4">
+            O **Supremo Tribunal Federal (STF)** equiparou a discriminação por orientação sexual e identidade de gênero ao crime de **Racismo** (Lei 7.716/89). Isso garante:
+            <ul class="list-disc pl-5 text-gray-600 mt-2">
+                <li>Punição para **Injúria Racial** e discriminação.</li>
+                <li>Crime **inafiançável** e **imprescritível**.</li>
+            </ul>
+        </p>
+        <a href="https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=416954" target="_blank" class="text-purple-600 font-medium hover:underline flex items-center">
+            Leia a decisão do STF (ADPF 786/ADO 26) <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+        </a>
+    </div>
+
+            </div>
+
+        </section>
+
+        </div>
+
+    <footer class="bg-gray-800 text-white py-8 mt-10" data-aos="fade-up">
+        <div class="container mx-auto px-4 text-center">
+
+            <p class="text-xl font-bold mb-4">Telefones Úteis: <span class="text-red-500">180</span> (Denúncia) e <span class="text-red-500">190</span> (Emergência)</p>
+
+           <p class="text-gray-400 mb-2">Secretaria da Mulher. | Projeto de ensino extensionista</p>
+            <div class="mt-4">
+                <span class="text-xs text-gray-500">Desenvolvido por JOSÉ AIRTON B. S. JUNIOR - fone:(91)983252639</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // O script de inicialização do AOS já estava correto, mas o reorganizei para garantir a execução.
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializa a biblioteca AOS com configurações globais
+            AOS.init({
+                duration: 800, // Duração de 800ms
+                easing: 'ease-in-out', // Suavização de entrada e saída
+                once: true // Anima apenas na primeira vez que o elemento entra na tela
+            });
+
+            // Inicializa os ícones Feather
+            feather.replace();
+        });
+
+        // Removi a função 'menu-toggle' pois não há botão com este ID no seu HTML atual.
+    </script>
+</body>
+</html>
