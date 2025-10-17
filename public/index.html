@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergência e Apoio - Secretaria da Mulher</title>
+    <title>Secretaria da Mulher e da Diversidade Humana</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -34,6 +34,21 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+
+        /* Estilos customizados para a seção de dados */
+        .dado-grande {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .badge-positivo {
+            background-color: #ffe5ee;
+            color: #a80038;
+        }
+        .badge-negativo {
+            background-color: #e5ffe5;
+            color: #008000;
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
@@ -43,20 +58,47 @@
     </a>
 
     <div class="container mx-auto px-4 py-4 max-w-7xl bg-white shadow-xl min-h-screen">
-        <header class="flex justify-between items-center py-4 border-b border-pink-200">
-            <a href="index.html" class="flex items-center">
-                <img src="https://i.imgur.com/QtGQAZ4.jpeg" width="400px">
-            </a>
-            <div class="hidden md:flex space-x-4 items-center">
-                <a href="index.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Início</a>
-                <a href="ajuda.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Onde Buscar Ajuda</a>
-                <a href="violencia.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Informação</a>
-                <a href="apoio.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Apoio</a>
-            </div>
-        </header>
+       <header class="sticky top-0 z-50 bg-white shadow-lg">
+    <div class="container mx-auto px-4 py-4 max-w-7xl flex justify-between items-center">
+        <a href="index.html" class="flex items-center">
+            <img src="https://i.imgur.com/QtGQAZ4.jpeg" width="300px" alt="Logo Secretaria da Mulher">
+        </a>
 
-<!--SLIDE 1-->
-    <div class="slideshow-container relative w-full h-96 overflow-hidden">
+        <nav class="hidden md:flex space-x-6 items-center">
+            <a href="index.html" class="text-gray-700 hover:text-pink-600 transition font-medium text-lg">Início</a>
+            <a href="violencia.html" class="text-gray-700 hover:text-pink-600 transition font-medium text-lg">Informação</a>
+            <a href="apoio.html" class="text-gray-700 hover:text-pink-600 transition font-medium text-lg">Apoio</a>
+
+            <a href="ajuda.html" class="bg-red-600 text-white px-5 py-2 rounded-full font-bold shadow-md hover:bg-red-700 transition transform hover:scale-105 flex items-center text-lg">
+                <i data-feather="map-pin" class="mr-2 w-5 h-5"></i> Onde Buscar Ajuda
+            </a>
+        </nav>
+
+        <button id="menu-btn" class="md:hidden text-gray-700 hover:text-pink-600 transition p-2 focus:outline-none">
+            <i data-feather="menu" class="w-7 h-7"></i>
+        </button>
+    </div>
+</header>
+
+<div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black bg-opacity-75 backdrop-blur-sm flex items-center justify-center transition-opacity duration-300">
+    <div class="bg-white w-11/12 max-w-md p-8 rounded-xl shadow-2xl relative">
+        <button id="close-menu" class="absolute top-4 right-4 text-gray-600 hover:text-red-600 transition p-2">
+            <i data-feather="x" class="w-7 h-7"></i>
+        </button>
+
+        <nav class="flex flex-col space-y-6 text-center">
+            <a href="index.html" class="text-gray-800 text-2xl font-semibold hover:text-pink-600 transition py-2 border-b">Início</a>
+            <a href="violencia.html" class="text-gray-800 text-2xl font-semibold hover:text-pink-600 transition py-2 border-b">Informação</a>
+            <a href="apoio.html" class="text-gray-800 text-2xl font-semibold hover:text-pink-600 transition py-2 border-b">Apoio</a>
+
+            <a href="ajuda.html" class="mt-4 bg-red-600 text-white px-5 py-3 rounded-xl font-bold text-xl shadow-lg hover:bg-red-700 transition transform hover:scale-105 flex items-center justify-center">
+                <i data-feather="map-pin" class="mr-2 w-6 h-6"></i> Onde Buscar Ajuda
+            </a>
+        </nav>
+    </div>
+</div>
+
+<div class="slideshow-container relative w-full h-96 overflow-hidden">
         <div class="mySlides fade relative w-full h-full">
             <img src="https://img.freepik.com/fotos-premium/uma-jovem-mulher-jogando-jogos-no-parque-na-grama-verde-estendendo-seus-bracos-e-pernas-em-diferentes-direcoes-caindo-e-sorrindo-na-luz-do-sol-de-verao-foto-de-alta-qualidade_163305-227827.jpg" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
@@ -71,8 +113,7 @@
             </div>
         </div>
 
-  <!--SLIDE 2-->
-        <div class="mySlides fade relative w-full h-full">
+  <div class="mySlides fade relative w-full h-full">
             <img src="https://img.freepik.com/fotos-gratis/vista-frontal-da-mulher-apreciando-a-grama-na-natureza_23-2148614765.jpg" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
                 <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
@@ -86,7 +127,6 @@
             </div>
         </div>
 
-        <!--SLIDE 3-->
         <div class="mySlides fade relative w-full h-full">
             <img src="https://img.freepik.com/fotos-premium/retrato-de-uma-jovem-de-pe-em-um-campo-gramado_1048944-15984502.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
@@ -101,7 +141,6 @@
             </div>
         </div>
 
-        <!--SLIDE 4-->
         <div class="mySlides fade relative w-full h-full">
             <img src="https://img.freepik.com/fotos-gratis/mulher-sentada-e-meditando-na-grama_23-2147648570.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
@@ -116,8 +155,7 @@
             </div>
         </div>
 
-         <!--SLIDE 5-->
-        <div class="mySlides fade relative w-full h-full">
+         <div class="mySlides fade relative w-full h-full">
             <img src="https://img.freepik.com/fotos-premium/mulher-jovem-atenciosa-ao-lado-do-trigo-na-fazenda-durante-um-dia-ensolarado_1048944-4416444.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
                 <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
@@ -131,8 +169,7 @@
             </div>
         </div>
 
-           <!--SLIDE 6-->
-        <div class="mySlides fade relative w-full h-full">
+           <div class="mySlides fade relative w-full h-full">
             <img src="https://img.freepik.com/fotos-gratis/foto-de-retrato-de-uma-mulher-loira-feliz-branca-com-um-vestido-de-verao-deitada-em-um-campo-durante-o-por-do-sol_181624-40824.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
                 <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
@@ -145,8 +182,7 @@
                 </div>
             </div>
         </div>
-           <!--SLIDE 7-->
-        <div class="mySlides fade relative w-full h-full">
+           <div class="mySlides fade relative w-full h-full">
             <img src="https://img.freepik.com/fotos-premium/retrato-de-uma-jovem-deitada-no-campo_1048944-9260176.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
                 <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
@@ -159,8 +195,7 @@
                 </div>
             </div>
         </div>
-           <!--SLIDE 8-->
-        <div class="mySlides fade relative w-full h-full">
+           <div class="mySlides fade relative w-full h-full">
             <img src="https://img.freepik.com/fotos-gratis/vista-superior-de-um-mulher-jovem-chao_23-2148205913.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
                 <div class="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold leading-tight max-w-2xl mx-auto">
@@ -214,7 +249,7 @@
 
         function currentSlide(n) {
             clearTimeout(timeout);
-            slideIndex = n;
+            slideIndex = n + 1;
             showSlides();
         }
 
@@ -238,7 +273,17 @@
             });
         });
 
-        showSlides();
+        // Corrigindo a exibição inicial dos dots
+        function showInitialSlide() {
+            slides.forEach(slide => slide.style.display = 'none');
+            dots.forEach(dot => dot.classList.remove('bg-white'));
+            slides[0].style.display = 'block';
+            dots[0].classList.add('bg-white');
+            slideIndex = 1;
+            timeout = setTimeout(showSlides, 10000);
+        }
+
+        showInitialSlide();
     </script>
 
     <section class="main-navigation grid md:grid-cols-3 gap-4 my-10" id="botoes-acao" data-aos="fade-up" data-aos-delay="100">
@@ -258,7 +303,74 @@
         </a>
     </section>
 
-<script>
+    <div class="secao-dados-violencia my-10" data-aos="fade-up" data-aos-delay="500">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 border-l-4 border-red-600 pl-3">O Cenário da Violência no Brasil: Dados Atuais</h2>
+        <p class="text-gray-600 mb-8">Estatísticas recentes (2024/2025) que revelam a urgência no combate à violência contra a Mulher e a População LGBTQIA+.</p>
+
+        <div class="p-6 mb-8 bg-pink-50 border-l-4 border-red-600 rounded-lg shadow-lg">
+            <h3 class="dado-grande text-red-700">21 Milhões</h3>
+            <p class="text-xl font-semibold text-gray-800">de brasileiras sofreram algum tipo de violência nos últimos 12 meses.</p>
+            <p class="text-gray-600 mt-2"><small>Fonte: FBSP/Datafolha (2025). Isto equivale a cerca de 2.400 mulheres violentadas por hora.</small></p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+
+            <div class="p-6 bg-white rounded-lg shadow-md border border-red-200 hover:shadow-xl transition">
+                <i data-feather="slash" class="w-8 h-8 text-red-600 mb-3"></i>
+                <h4 class="text-2xl font-bold text-red-700 leading-none">1.450</h4>
+                <p class="text-lg font-semibold text-gray-800 mt-1 mb-2">Casos de Feminicídio</p>
+                <p class="text-sm text-gray-600">Registrados em **2024** no Brasil. <span class="inline-block px-2 py-0.5 rounded-full text-xs font-medium badge-positivo">+0,8% vs. 2023.</span></p>
+                <p class="text-sm text-gray-600 mt-1"><small>Fonte: Min. das Mulheres - Raseam 2025.</small></p>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg shadow-md border border-purple-200 hover:shadow-xl transition">
+                <i data-feather="user-x" class="w-8 h-8 text-purple-600 mb-3"></i>
+                <h4 class="text-2xl font-bold text-purple-700 leading-none">~300</h4>
+                <p class="text-lg font-semibold text-gray-800 mt-1 mb-2">Mortes Violentas por LGBTfobia</p>
+                <p class="text-sm text-gray-600">Estimadas em **2024**. O Brasil segue como o país que mais mata pessoas trans no mundo.</p>
+                <p class="text-sm text-gray-600 mt-1"><small>Fonte: GGB / ANTRA (2025).</small></p>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg shadow-md border border-pink-200 hover:shadow-xl transition md:col-span-2 lg:col-span-1">
+                <i data-feather="percent" class="w-8 h-8 text-pink-600 mb-3"></i>
+                <h4 class="text-xl font-bold text-pink-700">64,2% das Vítimas</h4>
+                <p class="text-lg font-semibold text-gray-800 mt-1 mb-2">são **Mulheres Negras** (Pretas e Pardas).</p>
+                <div class="mt-4 bg-pink-100 rounded-full h-2.5 relative">
+                    <div class="h-2.5 bg-pink-600 rounded-full" style="width: 64.2%;"></div>
+                </div>
+                <p class="text-sm text-gray-600 mt-3"><small>Apenas 28,9% das vítimas eram Mulheres Brancas, evidenciando a desigualdade racial na violência. Fonte: FBSP/Datafolha 2025.</small></p>
+            </div>
+
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-800 mt-12 mb-6 border-l-4 border-pink-600 pl-3">Tipos de Violência - O que mais se denuncia (Ligue 180)</h3>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="p-5 bg-gray-100 rounded-lg shadow-sm">
+                <p class="text-3xl font-bold text-red-600">32,6%</p>
+                <p class="text-sm text-gray-700 font-semibold mt-1">Violência Psicológica</p>
+            </div>
+
+            <div class="p-5 bg-gray-100 rounded-lg shadow-sm">
+                <p class="text-3xl font-bold text-red-600">29,7%</p>
+                <p class="text-sm text-gray-700 font-semibold mt-1">Violência Física</p>
+            </div>
+
+            <div class="p-5 bg-gray-100 rounded-lg shadow-sm">
+                <p class="text-3xl font-bold text-red-600">7,7%</p>
+                <p class="text-sm text-gray-700 font-semibold mt-1">Violência Sexual</p>
+            </div>
+
+            <div class="p-5 bg-gray-100 rounded-lg shadow-sm">
+                <p class="text-3xl font-bold text-red-600">76,6%</p>
+                <p class="text-sm text-gray-700 font-semibold mt-1">Agressor do sexo masculino</p>
+            </div>
+        </div>
+        <p class="text-xs text-gray-500 mt-4 text-right"><small>Fonte: Central de Atendimento à Mulher - Ligue 180 (Raseam 2025).</small></p>
+
+    </div>
+    <script>
     // Inicializa os ícones Feather novamente para garantir que os novos ícones sejam exibidos
     feather.replace();
 </script>
@@ -329,7 +441,7 @@
 
             <p class="text-xl font-bold mb-4">Telefones Úteis: <span class="text-red-500">180</span> (Denúncia) e <span class="text-red-500">190</span> (Emergência)</p>
 
-           <p class="text-gray-400 mb-2">Secretaria da Mulher. | Projeto de ensino extensionista</p>
+           <p class="text-gray-400 mb-2">Secretaria da Mulher e da Diversidade Humana. | Projeto de ensino extensionista</p>
             <div class="mt-4">
                 <span class="text-xs text-gray-500">Desenvolvido por JOSÉ AIRTON B. S. JUNIOR - fone:(91)983252639</span>
             </div>
@@ -350,7 +462,15 @@
             feather.replace();
         });
 
-        // Removi a função 'menu-toggle' pois não há botão com este ID no seu HTML atual.
+
+        // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.remove('hidden');
+    });
+
+    document.getElementById('close-menu').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+    });
     </script>
 </body>
 </html>
