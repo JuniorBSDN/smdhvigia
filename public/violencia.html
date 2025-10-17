@@ -49,19 +49,45 @@
 
     <div class="container mx-auto px-4 py-4 max-w-7xl bg-white shadow-xl min-h-screen">
 
-        <header class="flex justify-between items-center py-4 border-b border-pink-200">
-            <a href="index.html" class="flex items-center">
-                <img src="https://i.imgur.com/QtGQAZ4.jpeg" width="400px">
+        <header class="sticky top-0 z-50 bg-white shadow-lg">
+    <div class="container mx-auto px-4 py-4 max-w-7xl flex justify-between items-center">
+        <a href="index.html" class="flex items-center">
+            <img src="https://i.imgur.com/QtGQAZ4.jpeg" width="300px" alt="Logo Secretaria da Mulher">
+        </a>
+
+        <nav class="hidden md:flex space-x-6 items-center">
+            <a href="index.html" class="text-gray-700 hover:text-pink-600 transition font-medium text-lg">Início</a>
+            <a href="violencia.html" class="text-gray-700 hover:text-pink-600 transition font-medium text-lg">Informação</a>
+            <a href="apoio.html" class="text-gray-700 hover:text-pink-600 transition font-medium text-lg">Apoio</a>
+
+            <a href="ajuda.html" class="bg-red-600 text-white px-5 py-2 rounded-full font-bold shadow-md hover:bg-red-700 transition transform hover:scale-105 flex items-center text-lg">
+                <i data-feather="map-pin" class="mr-2 w-5 h-5"></i> Onde Buscar Ajuda
             </a>
+        </nav>
 
-            <div class="hidden md:flex space-x-4 items-center">
-                <a href="index.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Início</a>
-                <a href="ajuda.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Onde Buscar Ajuda</a>
-                <a href="violencia.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Informação</a>
-                <a href="apoio.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Apoio</a>
-            </div>
+        <button id="menu-btn" class="md:hidden text-gray-700 hover:text-pink-600 transition p-2 focus:outline-none">
+            <i data-feather="menu" class="w-7 h-7"></i>
+        </button>
+    </div>
+</header>
 
-        </header>
+<div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black bg-opacity-75 backdrop-blur-sm flex items-center justify-center transition-opacity duration-300">
+    <div class="bg-white w-11/12 max-w-md p-8 rounded-xl shadow-2xl relative">
+        <button id="close-menu" class="absolute top-4 right-4 text-gray-600 hover:text-red-600 transition p-2">
+            <i data-feather="x" class="w-7 h-7"></i>
+        </button>
+
+        <nav class="flex flex-col space-y-6 text-center">
+            <a href="index.html" class="text-gray-800 text-2xl font-semibold hover:text-pink-600 transition py-2 border-b">Início</a>
+            <a href="violencia.html" class="text-gray-800 text-2xl font-semibold hover:text-pink-600 transition py-2 border-b">Informação</a>
+            <a href="apoio.html" class="text-gray-800 text-2xl font-semibold hover:text-pink-600 transition py-2 border-b">Apoio</a>
+
+            <a href="ajuda.html" class="mt-4 bg-red-600 text-white px-5 py-3 rounded-xl font-bold text-xl shadow-lg hover:bg-red-700 transition transform hover:scale-105 flex items-center justify-center">
+                <i data-feather="map-pin" class="mr-2 w-6 h-6"></i> Onde Buscar Ajuda
+            </a>
+        </nav>
+    </div>
+</div>
 
         <div class="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 my-6" role="alert" data-aos="fade-down">
             <p class="font-bold">ALERTA:</p>
@@ -90,12 +116,16 @@
             <div class="main-content flex-1 bg-white p-6 rounded-lg shadow-lg">
 
                 <div id="fisica" class="type-section border-b border-gray-200 pb-8 mb-8" data-aos="fade-up">
-                    <h2 class="text-3xl font-bold text-pink-700 mb-4 flex items-center">
+
+                    <div class="examples list-disc pl-5 space-y-2 text-gray-600 bg-pink-0 p-4 rounded-md">
+                      <h2 class="text-3xl font-bold text-pink-700 mb-4 flex items-center">
                         <i data-feather="frown" class="mr-2 w-6 h-6"></i> 1. Violência Física
                     </h2>
                     <p class="mb-4 text-gray-700"><strong>Definição Legal:</strong> Qualquer conduta que **ofenda a integridade ou saúde corporal** da mulher.</p>
-                    <p class="font-bold text-gray-800">Exemplos Práticos:</p>
+                    </div>
+
                     <ul class="examples list-disc pl-5 space-y-2 text-gray-600 bg-pink-50 p-4 rounded-md">
+                        <p class="font-bold text-gray-800">Exemplos Práticos:</p>
                         <li>Bater, chutar, empurrar, sacudir ou morder.</li>
                         <li>Queimar ou cortar intencionalmente.</li>
                         <li>Arremessar objetos na sua direção.</li>
@@ -104,12 +134,14 @@
                 </div>
 
                 <div id="psicologica" class="type-section border-b border-gray-200 pb-8 mb-8" data-aos="fade-up" data-aos-delay="100">
-                    <h2 class="text-3xl font-bold text-pink-700 mb-4 flex items-center">
-                        <i data-feather="eye-off" class="mr-2 w-6 h-6"></i> 2. Violência Psicológica
-                    </h2>
-                    <p class="mb-4 text-gray-700"><strong>Definição Legal:</strong> Qualquer conduta que cause **dano emocional**, diminuição da autoestima, ou vise **degradar ou controlar suas ações**, crenças e decisões.</p>
-                    <p class="font-bold text-gray-800">Exemplos Práticos:</p>
+                    <div class="examples list-disc pl-5 space-y-2 text-gray-600 bg-pink-0 p-4 rounded-md">
+                        <h2 class="text-3xl font-bold text-pink-700 mb-4 flex items-center">
+                            <i data-feather="eye-off" class="mr-2 w-6 h-6"></i> 2. Violência Psicológica
+                        </h2>
+                        <p class="mb-4 text-gray-700"><strong>Definição Legal:</strong> Qualquer conduta que cause **dano emocional**, diminuição da autoestima, ou vise **degradar ou controlar suas ações**, crenças e decisões.</p>
+                    </div>
                     <ul class="examples list-disc pl-5 space-y-2 text-gray-600 bg-pink-50 p-4 rounded-md">
+                        <p class="font-bold text-gray-800">Exemplos Práticos:</p>
                         <li>**Ameaças, humilhações** e insultos constantes.</li>
                         <li>**Controle** sobre a vida social (impedir contato com amigos ou familiares).</li>
                         <li>**Vigilância constante** (revistar celular, exigir senhas).</li>
@@ -118,12 +150,14 @@
                 </div>
 
                 <div id="moral" class="type-section border-b border-gray-200 pb-8 mb-8" data-aos="fade-up" data-aos-delay="200">
-                    <h2 class="text-3xl font-bold text-pink-700 mb-4 flex items-center">
-                        <i data-feather="message-circle" class="mr-2 w-6 h-6"></i> 3. Violência Moral
-                    </h2>
-                    <p class="mb-4 text-gray-700"><strong>Definição Legal:</strong> Qualquer conduta que configure **calúnia, difamação ou injúria**.</p>
-                    <p class="font-bold text-gray-800">Exemplos Práticos:</p>
+                    <div class="examples list-disc pl-5 space-y-2 text-gray-600 bg-pink-0 p-4 rounded-md">
+                        <h2 class="text-3xl font-bold text-pink-700 mb-4 flex items-center">
+                            <i data-feather="message-circle" class="mr-2 w-6 h-6"></i> 3. Violência Moral
+                        </h2>
+                        <p class="mb-4 text-gray-700"><strong>Definição Legal:</strong> Qualquer conduta que configure **calúnia, difamação ou injúria**.</p>
+                    </div>
                     <ul class="examples list-disc pl-5 space-y-2 text-gray-600 bg-pink-50 p-4 rounded-md">
+                        <p class="font-bold text-gray-800">Exemplos Práticos:</p>
                         <li>**Acusar falsamente** a mulher de ter cometido um crime (Calúnia).</li>
                         <li>**Espalhar boatos** ou informações falsas que denigrem a imagem da mulher (Difamação).</li>
                         <li>Proferir **xingamentos ou ofensas** que atinjam a sua dignidade (Injúria).</li>
@@ -131,12 +165,14 @@
                 </div>
 
                 <div id="sexual" class="type-section border-b border-gray-200 pb-8 mb-8" data-aos="fade-up" data-aos-delay="300">
-                    <h2 class="text-3xl font-bold text-pink-700 mb-4 flex items-center">
-                        <i data-feather="user-x" class="mr-2 w-6 h-6"></i> 4. Violência Sexual
-                    </h2>
-                    <p class="mb-4 text-gray-700"><strong>Definição Legal:</strong> Qualquer conduta que a **constranja a presenciar, a manter ou a participar de relação sexual não desejada**, mediante intimidação, ameaça, coação ou uso da força.</p>
-                    <p class="font-bold text-gray-800">Exemplos Práticos:</p>
+                    <div class="examples list-disc pl-5 space-y-2 text-gray-600 bg-pink-0 p-4 rounded-md">
+                        <h2 class="text-3xl font-bold text-pink-700 mb-4 flex items-center">
+                            <i data-feather="user-x" class="mr-2 w-6 h-6"></i> 4. Violência Sexual
+                        </h2>
+                        <p class="mb-4 text-gray-700"><strong>Definição Legal:</strong> Qualquer conduta que a **constranja a presenciar, a manter ou a participar de relação sexual não desejada**, mediante intimidação, ameaça, coação ou uso da força.</p>
+                    </div>
                     <ul class="examples list-disc pl-5 space-y-2 text-gray-600 bg-pink-50 p-4 rounded-md">
+                        <p class="font-bold text-gray-800">Exemplos Práticos:</p>
                         <li>Obrigá-la a fazer, presenciar ou participar de atos sexuais que ela não quer.</li>
                         <li>**Impedir o uso de métodos contraceptivos** ou forçar a gravidez/aborto.</li>
                         <li>Obrigá-la a se despir ou ter relações com outras pessoas.</li>
@@ -144,12 +180,14 @@
                 </div>
 
                 <div id="patrimonial" class="type-section pb-8 mb-8" data-aos="fade-up" data-aos-delay="400">
-                    <h2 class="text-3xl font-bold text-pink-700 mb-4 flex items-center">
-                        <i data-feather="dollar-sign" class="mr-2 w-6 h-6"></i> 5. Violência Patrimonial
-                    </h2>
-                    <p class="mb-4 text-gray-700"><strong>Definição Legal:</strong> Qualquer conduta que configure retenção, subtração, destruição parcial ou total de seus **bens, instrumentos de trabalho, documentos pessoais, valores** e direitos.</p>
-                    <p class="font-bold text-gray-800">Exemplos Práticos:</p>
+                    <div class="examples list-disc pl-5 space-y-2 text-gray-600 bg-pink-0 p-4 rounded-md">
+                        <h2 class="text-3xl font-bold text-pink-700 mb-4 flex items-center">
+                            <i data-feather="dollar-sign" class="mr-2 w-6 h-6"></i> 5. Violência Patrimonial
+                        </h2>
+                        <p class="mb-4 text-gray-700"><strong>Definição Legal:</strong> Qualquer conduta que configure retenção, subtração, destruição parcial ou total de seus **bens, instrumentos de trabalho, documentos pessoais, valores** e direitos.</p>
+                    </div>
                     <ul class="examples list-disc pl-5 space-y-2 text-gray-600 bg-pink-50 p-4 rounded-md">
+                        <p class="font-bold text-gray-800">Exemplos Práticos:</p>
                         <li>**Quebrar ou danificar** pertences, objetos de afeto ou documentos.</li>
                         <li>**Reter documentos pessoais** (RG, CPF, Carteira de Trabalho).</li>
                         <li>**Controlar o dinheiro** da mulher, impedindo-a de ter sua própria renda.</li>
@@ -169,7 +207,7 @@
 
             <p class="text-xl font-bold mb-4">Telefones Úteis: <span class="text-red-500">180</span> (Denúncia) e <span class="text-red-500">190</span> (Emergência)</p>
 
-           <p class="text-gray-400 mb-2">Secretaria da Mulher. | Projeto de ensino extensionista</p>
+           <p class="text-gray-400 mb-2">Secretaria da Mulher e da Diversidade Humana. | Projeto de ensino extensionista</p>
             <div class="mt-4">
                 <span class="text-xs text-gray-500">Desenvolvido por JOSÉ AIRTON B. S. JUNIOR - fone:(91)983252639</span>
             </div>
@@ -232,6 +270,21 @@
                 });
             });
         });
+
+        // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.remove('hidden');
+        // Opcional: Adiciona um efeito de fade
+        // document.getElementById('mobile-menu').style.opacity = '1';
+    });
+
+    document.getElementById('close-menu').addEventListener('click', function() {
+        // Opcional: Adiciona um efeito de fade
+        // document.getElementById('mobile-menu').style.opacity = '0';
+        // setTimeout(() => {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        // }, 300); // 300ms para corresponder à transição, se você usar o fade
+    });
     </script>
 </body>
 </html>
