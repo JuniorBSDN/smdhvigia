@@ -34,18 +34,45 @@
 
     <div class="container mx-auto px-4 py-4 max-w-7xl bg-white shadow-xl min-h-screen">
 
-        <header class="flex justify-between items-center py-4 border-b border-pink-200">
-            <a href="index.html" class="flex items-center">
-                <img src="https://i.imgur.com/QtGQAZ4.jpeg" width="400px">
-            </a>
-            <div class="hidden md:flex space-x-4 items-center">
-                <a href="index.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Início</a>
-                <a href="ajuda.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Onde Buscar Ajuda</a>
-                <a href="violencia.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Informação</a>
-                <a href="apoio.html" class="text-gray-700 hover:text-pink-600 transition font-medium">Apoio</a>
-            </div>
+        <header class="sticky top-0 z-50 bg-white shadow-lg">
+    <div class="container mx-auto px-4 py-4 max-w-7xl flex justify-between items-center">
+        <a href="index.html" class="flex items-center">
+            <img src="https://i.imgur.com/QtGQAZ4.jpeg" width="300px" alt="Logo Secretaria da Mulher">
+        </a>
 
-        </header>
+        <nav class="hidden md:flex space-x-6 items-center">
+            <a href="index.html" class="text-gray-700 hover:text-pink-600 transition font-medium text-lg">Início</a>
+            <a href="violencia.html" class="text-gray-700 hover:text-pink-600 transition font-medium text-lg">Informação</a>
+            <a href="apoio.html" class="text-gray-700 hover:text-pink-600 transition font-medium text-lg">Apoio</a>
+
+            <a href="ajuda.html" class="bg-red-600 text-white px-5 py-2 rounded-full font-bold shadow-md hover:bg-red-700 transition transform hover:scale-105 flex items-center text-lg">
+                <i data-feather="map-pin" class="mr-2 w-5 h-5"></i> Onde Buscar Ajuda
+            </a>
+        </nav>
+
+        <button id="menu-btn" class="md:hidden text-gray-700 hover:text-pink-600 transition p-2 focus:outline-none">
+            <i data-feather="menu" class="w-7 h-7"></i>
+        </button>
+    </div>
+</header>
+
+<div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black bg-opacity-75 backdrop-blur-sm flex items-center justify-center transition-opacity duration-300">
+    <div class="bg-white w-11/12 max-w-md p-8 rounded-xl shadow-2xl relative">
+        <button id="close-menu" class="absolute top-4 right-4 text-gray-600 hover:text-red-600 transition p-2">
+            <i data-feather="x" class="w-7 h-7"></i>
+        </button>
+
+        <nav class="flex flex-col space-y-6 text-center">
+            <a href="index.html" class="text-gray-800 text-2xl font-semibold hover:text-pink-600 transition py-2 border-b">Início</a>
+            <a href="violencia.html" class="text-gray-800 text-2xl font-semibold hover:text-pink-600 transition py-2 border-b">Informação</a>
+            <a href="apoio.html" class="text-gray-800 text-2xl font-semibold hover:text-pink-600 transition py-2 border-b">Apoio</a>
+
+            <a href="ajuda.html" class="mt-4 bg-red-600 text-white px-5 py-3 rounded-xl font-bold text-xl shadow-lg hover:bg-red-700 transition transform hover:scale-105 flex items-center justify-center">
+                <i data-feather="map-pin" class="mr-2 w-6 h-6"></i> Onde Buscar Ajuda
+            </a>
+        </nav>
+    </div>
+</div>
 
         <div class="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 my-6" role="alert" data-aos="fade-down">
             <p class="font-bold">ALERTA:</p>
@@ -122,66 +149,15 @@
                     Ver no Mapa <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
                 </a>
             </div>
-
-
-            <div class="service-card bg-red-100 rounded-xl p-6 shadow-lg border-t-4 border-red-600 lg:col-span-2" data-aos="fade-up" data-aos-delay="600">
-                <h4 class="text-xl font-bold text-red-800 mb-2 flex items-center">
-                    <i data-feather="alert-octagon" class="mr-2 w-5 h-5 text-red-600"></i> Casa Abrigo Municipal
-                </h4>
-                <p class="text-sm text-red-600 mb-3 font-bold">Tipo: Acolhimento de Urgência (ENDEREÇO SIGILOSO)</p>
-
-                <div class="bg-red-200 p-3 rounded-md mb-3">
-                    <p class="text-red-800 font-bold flex items-start">
-                        <i data-feather="info" class="w-5 h-5 mr-2 mt-0.5"></i>
-                        Para sua segurança, o endereço não é divulgado publicamente.
-                    </p>
-                    <p class="text-red-800 mt-2">
-                        **PROCEDIMENTO:** Para acesso e encaminhamento, você deve ligar **180** ou procurar o **CREAS** (Centro de Referência Especializado) mais próximo.
-                    </p>
-                </div>
-
-                <p class="text-gray-700 flex items-start"><i data-feather="phone" class="w-4 h-4 mr-2 mt-1 text-gray-600"></i> Telefone: (XX) XXXX-XXXX (Apenas para profissionais e rede de apoio)</p>
-
-                <a href="tel:180" class="map-link inline-flex items-center text-red-600 font-bold hover:underline mt-2">
-                    Ligue 180 para Encaminhamento Seguro <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-                </a>
-            </div>
-
         </div>
-
-            <div class="service-card bg-red-100 rounded-xl p-6 shadow-lg border-t-4 border-red-600 lg:col-span-3" data-aos="fade-up">
-                <h4 class="text-xl font-bold text-red-800 mb-2 flex items-center">
-                    <i data-feather="alert-octagon" class="mr-2 w-5 h-5 text-red-600"></i> Casa Abrigo Municipal
-                </h4>
-                <p class="text-sm text-red-600 mb-3 font-bold">Tipo: Acolhimento de Urgência (ENDEREÇO SIGILOSO)</p>
-
-                <div class="bg-red-200 p-3 rounded-md mb-3">
-                    <p class="text-red-800 font-bold flex items-start">
-                        <i data-feather="info" class="w-5 h-5 mr-2 mt-0.5"></i>
-                        Para sua segurança, o endereço não é divulgado publicamente.
-                    </p>
-                    <p class="text-red-800 mt-2">
-                        **PROCEDIMENTO:** Para acesso e encaminhamento, você deve ligar **180** ou procurar o **CRAM** (Centro de Referência de Atendimento à Mulher) mais próximo.
-                    </p>
-                </div>
-
-                <p class="text-gray-700 flex items-start"><i data-feather="phone" class="w-4 h-4 mr-2 mt-1 text-gray-600"></i> Telefone: (XX) XXXX-XXXX (Apenas para profissionais e rede de apoio)</p>
-
-                <a href="#" class="map-link inline-flex items-center text-red-600 font-bold hover:underline mt-2">
-                    Ligue 180 para Encaminhamento Seguro <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-                </a>
-            </div>
-
-        </div>
-
-        </div>
+    </div>
 
     <footer class="bg-gray-800 text-white py-8 mt-10" data-aos="fade-up">
         <div class="container mx-auto px-4 text-center">
 
             <p class="text-xl font-bold mb-4">Telefones Úteis: <span class="text-red-500">180</span> (Denúncia) e <span class="text-red-500">190</span> (Emergência)</p>
 
-           <p class="text-gray-400 mb-2">Secretaria da Mulher. | Projeto de ensino extensionista</p>
+           <p class="text-gray-400 mb-2">Secretaria da Mulher e da Diversidade Humana. | Projeto de ensino extensionista</p>
             <div class="mt-4">
                 <span class="text-xs text-gray-500">Desenvolvido por JOSÉ AIRTON B. S. JUNIOR - fone:(91)983252639</span>
             </div>
@@ -200,6 +176,21 @@
             // Inicializa os ícones Feather
             feather.replace();
         });
+
+        // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.remove('hidden');
+        // Opcional: Adiciona um efeito de fade
+        // document.getElementById('mobile-menu').style.opacity = '1';
+    });
+
+    document.getElementById('close-menu').addEventListener('click', function() {
+        // Opcional: Adiciona um efeito de fade
+        // document.getElementById('mobile-menu').style.opacity = '0';
+        // setTimeout(() => {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        // }, 300); // 300ms para corresponder à transição, se você usar o fade
+    });
     </script>
 </body>
 </html>
